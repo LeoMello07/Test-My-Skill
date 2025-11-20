@@ -2741,6 +2741,7 @@ __metadata:
     prettier: 2.8.8
     react: 19.1.1
     react-native: 0.82.1
+    react-native-blur-view: "https://github.com/kirgudkov/react-native-blur-view.git"
     react-native-safe-area-context: ^5.5.2
     react-test-renderer: 19.1.1
     typescript: ^5.8.3
@@ -7439,6 +7440,16 @@ __metadata:
   version: 19.2.0
   resolution: "react-is@npm:19.2.0"
   checksum: 9a23e1c2d0bbc13b383bc59a05f54e6eb95dd87e01aec8aa92a88618364b7b0ee8a5b057ad813cf61e2f7ae7d24503b624706acb609d07c54754e5ad2c522568
+  languageName: node
+  linkType: hard
+
+"react-native-blur-view@https://github.com/kirgudkov/react-native-blur-view.git":
+  version: 0.1.0
+  resolution: "react-native-blur-view@https://github.com/kirgudkov/react-native-blur-view.git#commit=416462098348c80076c36cf69c50cd06f31d303b"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: fbc0d2127841498abd58fee7db06315765ba12470249b02d24fdb7516daaa5ddb40fe06b7f1a76f9116becf282da6430c85a6f54101daf4faa7dd37287b77f74
   languageName: node
   linkType: hard
 
