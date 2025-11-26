@@ -11,10 +11,10 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
+    "@react-native-community/blur": "^4.4.1",
     "@react-native/new-app-screen": "0.82.1",
     "react": "19.1.1",
     "react-native": "0.82.1",
-    "react-native-blur-view": "git+ssh://git@github.com:LeoMello07/react-native-blur-view.git",
     "react-native-safe-area-context": "^5.5.2"
   },
   "devDependencies": {
