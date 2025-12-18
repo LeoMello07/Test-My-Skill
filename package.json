@@ -11,11 +11,17 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
+    "@gorhom/bottom-sheet": "^5",
+    "@miblanchard/react-native-slider": "^2.6.0",
     "@react-native-community/blur": "^4.4.1",
+    "@react-native-community/slider": "^5.1.1",
     "@react-native/new-app-screen": "0.82.1",
     "react": "19.1.1",
     "react-native": "0.82.1",
-    "react-native-safe-area-context": "^5.5.2"
+    "react-native-gesture-handler": "^2.29.1",
+    "react-native-reanimated": "^4.2.0",
+    "react-native-safe-area-context": "^5.5.2",
+    "react-native-worklets": "^0.7.1"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",

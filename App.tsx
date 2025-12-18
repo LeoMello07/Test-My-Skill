@@ -1,81 +1,34 @@
-import {
-  Image,
-  StatusBar,
-  StyleSheet,
-  useColorScheme,
-  View,
-  Text,
-} from 'react-native';
+import { BackHandler, Button, StatusBar, useColorScheme, View } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { BlurView } from '@react-native-community/blur';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { BottomSheetComponent } from './src/BottomSheet';
+import React, { useEffect } from 'react';
+import { BottomSheetLocalProvider } from './src/BottomSheet/context';
+import { Home } from './src/Home';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
+
+  useEffect(() => {
+    const backHandler = BackHandler.addEventListener('hardwareBackPress', () => {
+      return true;
+    });
+    return () => backHandler.remove();
+  }, []);
+
   return (
     <SafeAreaProvider>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <AppContent />
+      <GestureHandlerRootView style={{ flex: 1 }}>
+        <BottomSheetLocalProvider>
+          <Home />
+          <BottomSheetComponent />
+        </BottomSheetLocalProvider>
+
+      </GestureHandlerRootView>
     </SafeAreaProvider>
   );
 }
-
-function AppContent() {
-  return (
-    <View style={styles.container}>
-      <View style={styles.content}>
-        <View style={styles.box}>
-          <Image source={require('./assets/happyDog.jpg')} style={styles.img} />
-          <BlurView style={styles.absolute} blurType="light" blurAmount={0} overlayColor='transparent' />
-        </View>
-
-        <View style={styles.box}>
-          <Image source={require('./assets/happyDog.jpg')} style={styles.img} />
-          <BlurView style={styles.absolute} blurType="light" blurAmount={3} />
-        </View>
-
-        <View style={styles.box}>
-          <Image source={require('./assets/happyDog.jpg')} style={styles.img} />
-          <BlurView style={styles.absolute} blurType="light" blurAmount={10} />
-        </View>
-      </View>
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'gray',
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingHorizontal: 40,
-    gap: 10,
-  },
-  content: {
-    flexDirection: 'row',
-    gap: 15,
-  },
-  box: {
-    width: 100,
-    height: 100,
-    borderRadius: 12,
-    overflow: 'hidden',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  img: {
-    width: '100%',
-    height: '100%',
-    resizeMode: 'cover',
-  },
-  absolute: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    bottom: 0,
-    right: 0,
-  },
-});
 
 export default App;
