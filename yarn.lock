@@ -1520,6 +1520,34 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@floating-ui/core@npm:^1.0.0":
+  version: 1.7.3
+  resolution: "@floating-ui/core@npm:1.7.3"
+  dependencies:
+    "@floating-ui/utils": ^0.2.10
+  checksum: 5adfb28ddfa1776ec83516439256b9026e5d62b5413f62ae51e50a870cf0df4bea9abf72aacc0610ee84bc00e85883d0d32f2a0976ee7fa89728a717a7494f27
+  languageName: node
+  linkType: hard
+
+"@floating-ui/react-native@npm:^0.10.7":
+  version: 0.10.7
+  resolution: "@floating-ui/react-native@npm:0.10.7"
+  dependencies:
+    "@floating-ui/core": ^1.0.0
+  peerDependencies:
+    react: ">=16.8.0"
+    react-native: ">=0.64.0"
+  checksum: 684db42fe4fd9c9dde9129a54ac9bdcc1ff1f057e46789b83ca80df7a16423fc6cac431a045a33117f6d16195adb26ae51d513db5e1558ad6e5edad8d80e51cf
+  languageName: node
+  linkType: hard
+
+"@floating-ui/utils@npm:^0.2.10":
+  version: 0.2.10
+  resolution: "@floating-ui/utils@npm:0.2.10"
+  checksum: ffc4c24a46a665cfd0337e9aaf7de8415b572f8a0f323af39175e4b575582aed13d172e7f049eedeece9eaf022bad019c140a2d192580451984ae529bdf1285c
+  languageName: node
+  linkType: hard
+
 "@gorhom/bottom-sheet@npm:^5":
   version: 5.2.8
   resolution: "@gorhom/bottom-sheet@npm:5.2.8"
@@ -2917,6 +2945,7 @@ __metadata:
     "@babel/core": ^7.25.2
     "@babel/preset-env": ^7.25.3
     "@babel/runtime": ^7.25.0
+    "@floating-ui/react-native": ^0.10.7
     "@gorhom/bottom-sheet": ^5
     "@miblanchard/react-native-slider": ^2.6.0
     "@react-native-community/blur": ^4.4.1

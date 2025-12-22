@@ -14,7 +14,7 @@ export const BottomSheetComponent = () => {
     return (
         <BottomSheet
             ref={ref}
-            index={0}
+            index={-1}
             snapPoints={['50%']}
             animatedPosition={bottomSheetY}
             enablePanDownToClose={true}

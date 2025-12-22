@@ -11,6 +11,7 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
+    "@floating-ui/react-native": "^0.10.7",
     "@gorhom/bottom-sheet": "^5",
     "@miblanchard/react-native-slider": "^2.6.0",
     "@react-native-community/blur": "^4.4.1",
